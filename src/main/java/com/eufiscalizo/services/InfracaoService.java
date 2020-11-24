@@ -22,12 +22,12 @@ public class InfracaoService {
     @Autowired
     private InfracaoRepository repo;
 
-    private static final String CAMINHO_ARQUIVOS = "\\\\s276\\e$\\DADOS\\DPGE\\AJFILE\\ASSISTIDO\\";
+    private static final String CAMINHO_ARQUIVOS = "";
 
 
     public Infracao find(Long id) {
         Optional<Infracao> obj = repo.findById(id);
-        return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto n„o encontrado! Id: " + id + ", Tipo: " + Infracao.class.getName()));
+        return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto n√£o encontrado! Id: " + id + ", Tipo: " + Infracao.class.getName()));
     }
 
     public List<InfracaoNoImage> findAll() {
